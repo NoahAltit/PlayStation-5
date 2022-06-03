@@ -1,8 +1,14 @@
+import Home from "./components/Entrance/Home";
+import GlobalStyles from "./GlobalStyles";
+
 const App = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <>
+      <GlobalStyles />
+      <div>
+        <Home />
+      </div>
+    </>
   );
 };
 
