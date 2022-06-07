@@ -1,13 +1,23 @@
-import Home from "./components/Entrance/Home";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 import GlobalStyles from "./GlobalStyles";
+import Home from "./components/Home/Home";
+import SignIn from "./components/Sign In/SignIn";
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
-      <div>
-        <Home />
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path={"/"}>
+            <Home />
+          </Route>
+          <Route path={"/signin"}>
+            <SignIn />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };
