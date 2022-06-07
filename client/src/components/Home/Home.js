@@ -1,16 +1,19 @@
+import { useHistory } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 import bg from "../../assets/HomeBG.png";
 import logo from "../../assets/LogoPS.png";
 
 const Home = () => {
+  const history = useHistory();
+
   return (
     <>
       <Section>
         <Wrapper>
           <Text>Click the PS button on your screen.</Text>
           <Circle>
-            <LogoWrap>
+            <LogoWrap onClick={() => history.push("/signin")}>
               <Logo src={logo} />
             </LogoWrap>
           </Circle>
