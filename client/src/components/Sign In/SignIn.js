@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import { AiOutlinePlus } from "react-icons/ai";
 import bg from "../../assets/HomeBG.png";
@@ -14,7 +14,7 @@ const SignIn = () => {
         <Wrapper>
           <TextWrap>
             <Title>Welcome Back to PlayStation</Title>
-            <Subtitle>Who's using this controller?</Subtitle>
+            <Subtitle>Who's using this mouse?</Subtitle>
           </TextWrap>
           <Wrap>
             <PlayersWrap>
@@ -24,7 +24,10 @@ const SignIn = () => {
               <Text>Add User</Text>
             </PlayersWrap>
             <PlayersWrap>
-              <AddPlayer className="active">
+              <AddPlayer
+                className="active"
+                onClick={() => history.push("/gaming")}
+              >
                 <Avatar src={avatar} />
               </AddPlayer>
               <Text>Noah Altit</Text>
@@ -62,6 +65,7 @@ const TextWrap = styled.div`
 
 const Title = styled.h1`
   font-size: 45px;
+  margin-bottom: 10px;
 `;
 
 const Subtitle = styled.p`
@@ -70,7 +74,6 @@ const Subtitle = styled.p`
 `;
 
 const Wrap = styled.div`
-  /* border: 5px solid white; */
   padding: 20px 0;
   display: flex;
 `;
@@ -98,7 +101,7 @@ const AddPlayer = styled.div`
   }
 
   &.active {
-    border: 5px solid forestgreen;
+    border: 5px solid mediumaquamarine;
   }
 `;
 
@@ -110,7 +113,6 @@ const Text = styled.p`
 
 const Avatar = styled.img`
   width: 150px;
-  height: 150px;
   border-radius: 50%;
 `;
 
