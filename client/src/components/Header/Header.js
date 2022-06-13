@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { NavLink } from "react-router-dom";
+
 import avatar from "../../assets/avatar.jpg";
 import { HiOutlineSearch } from "react-icons/hi";
 import { IoMdSettings } from "react-icons/io";
@@ -16,8 +18,12 @@ const Header = () => {
     <>
       <Wrapper>
         <MainMenu>
-          <NavItem className="active">Games</NavItem>
-          <NavItem>Media</NavItem>
+          <NavLink to={"/gaming"} activeClassName="active">
+            Games
+          </NavLink>
+          <NavLink to={"/media"} activeClassName="active">
+            Media
+          </NavLink>
         </MainMenu>
         <SubMenu>
           <NavItem className="icon">
@@ -47,6 +53,20 @@ const Wrapper = styled.div`
 
 const MainMenu = styled.div`
   display: flex;
+
+  > a {
+    text-decoration: none;
+    margin: 0 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.8;
+
+    &.active {
+      font-weight: 500;
+      opacity: 1;
+    }
+  }
 `;
 
 const SubMenu = styled(MainMenu)`
@@ -61,11 +81,6 @@ const NavItem = styled.p`
   font-size: 20px;
   font-weight: 300;
   opacity: 0.8;
-
-  &.active {
-    font-weight: 500;
-    opacity: 1;
-  }
 
   &.icon {
     font-size: 25px;

@@ -1,4 +1,5 @@
 const games = require("./data/games.json");
+const media = require("./data/media.json");
 
 const { MongoClient } = require("mongodb");
 
@@ -18,7 +19,8 @@ const batchImport = async () => {
     await client.connect();
     console.log("Connected");
 
-    await db.collection("Games").insertMany(games);
+    // await db.collection("Games").insertMany(games);
+    await db.collection("Media").insertMany(media);
   } catch (err) {
     console.log(err);
   }
