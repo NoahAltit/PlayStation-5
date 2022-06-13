@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 const PORT = 4000;
 
-const { getGames } = require("./handlers");
+const { getGames, getMedia } = require("./handlers");
 
 app
   .use(function (req, res, next) {
@@ -29,6 +29,7 @@ app
   // Endpoints
 
   .get("/games", getGames)
+  .get("/media", getMedia)
 
   // Endpoints
 

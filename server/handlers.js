@@ -26,4 +26,18 @@ const getGames = async (req, res) => {
   client.close();
 };
 
-module.exports = { getGames };
+const getMedia = async (req, res) => {
+  try {
+    await client.connect();
+
+    const media = await db.collection("Media").find().toArray();
+
+    res.status(200).json({ status: 200, data: media });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ status: 500, message: "Server error" });
+  }
+  client.close();
+};
+
+module.exports = { getGames, getMedia };
