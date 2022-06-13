@@ -6,6 +6,7 @@ import Header from "../Header/Header";
 
 import bg from "../../assets/HomeBG.png";
 import batBg from "../../assets/BatBG.jpg";
+import Load from "../Loading/Load";
 
 const GamePage = () => {
   const [games, setGames] = useState(null);
@@ -20,7 +21,7 @@ const GamePage = () => {
   }, []);
 
   if (!games) {
-    return <p>Loading...</p>;
+    return <Load />;
   }
 
   const toggleClass = (e) => {
