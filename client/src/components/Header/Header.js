@@ -7,6 +7,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { IoMdSettings } from "react-icons/io";
 
 const Header = () => {
+  // Get the current hour, and show AM or PM
   let date = new Date();
   let minutes = date.getMinutes();
   let hour = (date.getHours() + 24) % 12 || 12;

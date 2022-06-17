@@ -5,6 +5,7 @@ import bg from "../../assets/HomeBG.png";
 import avatar from "../../assets/avatar.jpg";
 import { useHistory } from "react-router-dom";
 
+// Not a real Sign In component yet
 const SignIn = () => {
   const history = useHistory();
 

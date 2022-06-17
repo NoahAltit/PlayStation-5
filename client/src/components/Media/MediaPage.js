@@ -8,6 +8,7 @@ import bg from "../../assets/HomeBG.png";
 import batBg from "../../assets/BatBG.jpg";
 import Load from "../Loading/Load";
 
+// Same comments as the GamePage component
 const MediaPage = () => {
   const [media, setMedia] = useState(null);
   const [backgroundImg, setBackgroundImg] = useState(`${bg}`);
