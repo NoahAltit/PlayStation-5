@@ -10,6 +10,8 @@ import Load from "../Loading/Load";
 
 const GamePage = () => {
   const [games, setGames] = useState(null);
+
+  /* Set the different bg images */
   const [backgroundImg, setBackgroundImg] = useState(`${bg}`);
 
   useEffect(() => {
@@ -24,6 +26,8 @@ const GamePage = () => {
     return <Load />;
   }
 
+  /* Toggle the "active" class on click and switch
+  the bg image */
   const toggleClass = (e) => {
     if (e.currentTarget.classList.contains("active")) {
       e.currentTarget.classList.remove("active");

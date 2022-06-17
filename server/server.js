@@ -1,6 +1,10 @@
 const express = require("express");
 const morgan = require("morgan");
+
+// Added cors to get rid of Error 431
+// "Request Header Fields Too Large"
 const cors = require("cors");
+
 const app = express();
 const PORT = 4000;
 
