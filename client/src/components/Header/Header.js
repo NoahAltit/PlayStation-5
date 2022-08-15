@@ -11,7 +11,7 @@ const Header = () => {
   let date = new Date();
   let minutes = date.getMinutes();
   let hour = (date.getHours() + 24) % 12 || 12;
-  let ampm = hour <= 12 ? "AM" : "PM";
+  let ampm = hour <= 12 ? "PM" : "AM";
   minutes = minutes < 10 ? "0" + minutes : minutes;
   let timeOfDay = `${hour}:${minutes} ${ampm}`;
 
