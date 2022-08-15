@@ -10,7 +10,7 @@ const options = {
 
 const client = new MongoClient(MONGO_URI, options);
 
-const db = client.db("PS5");
+const db = client.db("PStation");
 
 const getGames = async (req, res) => {
   try {
