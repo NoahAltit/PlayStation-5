@@ -46,21 +46,19 @@ const MediaPage = () => {
           <MediaWrap>
             {media.map((media) => {
               return (
-                <>
-                  <ContentWrap key={media.id} onClick={toggleClass}>
-                    <Media
-                      className="media"
-                      onClick={() => setBackgroundImg(`${media.bgImg}`)}
-                    >
-                      <Logo
-                        className={media.class}
-                        src={media.gameImg}
-                        style={{ border: media.border }}
-                      />
-                    </Media>
-                    <Text>{media.gameName}</Text>
-                  </ContentWrap>
-                </>
+                <ContentWrap key={media.gameName} onClick={toggleClass}>
+                  <Media
+                    className="media"
+                    onClick={() => setBackgroundImg(`${media.bgImg}`)}
+                  >
+                    <Logo
+                      className={media.class}
+                      src={media.gameImg}
+                      style={{ border: media.border }}
+                    />
+                  </Media>
+                  <Text>{media.gameName}</Text>
+                </ContentWrap>
               );
             })}
           </MediaWrap>
