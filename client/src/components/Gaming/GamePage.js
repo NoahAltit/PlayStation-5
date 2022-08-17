@@ -45,21 +45,19 @@ const GamePage = () => {
           <GameWrap>
             {games.map((game) => {
               return (
-                <>
-                  <ContentWrap key={game.id} onClick={toggleClass}>
-                    <Game
-                      className="game"
-                      onClick={() => setBackgroundImg(`${game.bgImg}`)}
-                    >
-                      <Logo
-                        className={game.class}
-                        src={game.gameImg}
-                        style={{ border: game.border }}
-                      />
-                    </Game>
-                    <Text>{game.gameName}</Text>
-                  </ContentWrap>
-                </>
+                <ContentWrap key={game.gameName} onClick={toggleClass}>
+                  <Game
+                    className="game"
+                    onClick={() => setBackgroundImg(`${game.bgImg}`)}
+                  >
+                    <Logo
+                      className={game.class}
+                      src={game.gameImg}
+                      style={{ border: game.border }}
+                    />
+                  </Game>
+                  <Text>{game.gameName}</Text>
+                </ContentWrap>
               );
             })}
           </GameWrap>
